@@ -1,0 +1,23 @@
+---
+title :  My Blog
+layout: 'base.njk'
+---
+
+   <section>
+       <div class="wrap">
+           <h1>Recent Post</h1>
+           <div class="post">
+              {%- for post in collections.post -%}
+                  <div class="posts">
+                         <h2><a href="">{{ post.data.title }}</a></h2>
+                  </div>
+              {%- endfor %}
+           </div>
+       </div>
+   </section>
+
+
+              {# <div class="posts">
+                   <h2><a href="./page/">How I Struggled with Eleventy</a></h2>
+                    <p> 24th September 2021</p>
+               </div> #}
