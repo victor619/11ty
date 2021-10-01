@@ -40,6 +40,10 @@ section .wrap p {
   line-height: 150%;
 }
 
+section .wrap .width {
+  width: 45ch;
+}
+
 section .wrap .post {
   display: -ms-grid;
   display: grid;
