@@ -1,25 +1,41 @@
 ---
-title: My Blog
-layout: 'base.njk'
+layout: "base.njk"
 ---
+    <section>
 
-   <section>
-       <div class="wrap">
-           <h1>Recent Post</h1>
-           <div class="post">
+        <div class="wrap">
+                <h1>Recent Posts</h1>
+                <div class="posts">
+                    {%- for post in  collections.post -%}
 
-              {%- for post in collections.post -%}
+                        <div class="post"> 
+                                 <div class="img"><img src="{{ post.data.img }}" alt="img"></div>
+                                    <div class="text">
+                                        <div class="inner">
+                                            <h2>{{ post.data.title }}</h2>
+                                            <i>Post {{ post.date }}</i>
+                                            <a href="{{ post.url }}">Read</a>
+                                        </div>
+                                    </div>
+                        </div> 
 
-                  <div class="posts">
-                         <h2><a href="{{post.url}}"> {{ post.data.title }} </a></h2>
-                         <p> {{ post.data.description }} </p>
-                  </div>
-
-              {%- endfor -%}
-              
-           </div>
-       </div>
-   </section>
+                    {%- endfor -%}
+                   
+                </div>
 
 
-           
+        </div>
+    </section>
+
+    
+                    {# <div class="post">
+                        <div class="img"><img src="./img/457f42172183983e6b684a5da233dfca.jpg" alt=""></div>
+                        <div class="text">
+                            <div class="inner">
+                                <h2>Hello World</h2>
+                            <i>Published 22-10-2021</i>
+                            <a href="/page.html">Read</a>
+                            </div>
+
+                        </div>
+                    </div> #}

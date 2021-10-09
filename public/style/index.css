@@ -2,16 +2,34 @@
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   padding: 0px;
   margin: 0px;
+  border-radius: 5px;
 }
 
 .wrap {
   width: 80%;
   margin: auto;
+  height: 100%;
 }
 
 a {
   text-decoration: none;
   color: #940094;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+  display: -ms-grid;
+  display: grid;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: top;
+     object-position: top;
+}
+
+nav {
+  padding: 20px 0px;
+  border-bottom: 1px solid rgba(128, 128, 128, 0.425);
 }
 
 nav .wrap {
@@ -29,26 +47,176 @@ nav .link ul li {
 }
 
 section {
-  padding: 20px 0px;
+  min-height: 400px;
+  padding: 30px 0px;
 }
 
 section .wrap h1 {
+  font-size: 36px;
+  color: rgba(49, 49, 49, 0.568);
   padding: 10px 0px;
+}
+
+section .wrap .posts {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+  grid-gap: 10px;
+  grid-auto-rows: minmax(150px, 300px);
+}
+
+.post {
+  position: relative;
+}
+
+.post > div {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.post .text {
+  border: 1px solid rgba(173, 173, 173, 0.459);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  background-image: -webkit-gradient(linear, left bottom, left top, from(rgba(153, 153, 153, 0.589)), to(rgba(255, 255, 255, 0.144)));
+  background-image: linear-gradient(bottom, rgba(153, 153, 153, 0.589), rgba(255, 255, 255, 0.144));
+}
+
+.post .text .inner {
+  padding: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.post .text .inner a {
+  padding: 5px;
+  background-color: purple;
+  width: 150px;
+  text-align: center;
+  font-weight: bolder;
+  color: white;
+}
+
+.post .text .inner a:active {
+  background-color: #b400b4;
+}
+
+.post:hover .img {
+  overflow: hidden;
+}
+
+.post:hover .img img {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  -webkit-transition: all 0.95s ease-in-out;
+  transition: all 0.95s ease-in-out;
+}
+
+@media (max-width: 700px) {
+  section .wrap .posts .post {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 3;
+    grid-column: 1/4;
+  }
+}
+
+footer {
+  background-color: #313131;
+  color: white;
+  height: 200px;
+}
+
+footer .wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+footer .wrap .link {
+  padding: 20px 0px;
+  width: 200px;
+}
+
+footer .wrap .link ul {
+  list-style-type: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+footer .wrap .link ul li {
+  padding: 0px 20px;
+}
+
+footer .wrap .link ul li a img {
+  -webkit-filter: invert(1);
+          filter: invert(1);
+  width: 40px;
+  height: 40px;
+}
+
+section .wrap .heading {
+  padding: 20px 0px;
+}
+
+section .wrap .heading h1 {
+  padding: 0px;
 }
 
 section .wrap p {
   line-height: 150%;
+  font-size: 18px;
 }
 
-section .wrap .post {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: 1fr;
-      grid-template-columns: 1fr;
-  grid-gap: 10px;
+section .wrap .pageImg {
+  margin: 20px 0px;
+  max-width: 100%;
+  height: 500px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: top;
+     object-position: top;
 }
 
-section .wrap .post .posts p {
-  padding: 10px 0px;
+.page {
+  max-width: 750px;
+  margin: auto;
+}
+
+@media (max-width: 700px) {
+  section .wrap p {
+    font-size: 17px;
+  }
 }
 /*# sourceMappingURL=index.css.map */

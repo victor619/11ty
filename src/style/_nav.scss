@@ -1,0 +1,19 @@
+nav{
+    padding:20px 0px;
+    border-bottom: 1px solid rgba(128, 128, 128, 0.425);
+    .wrap{
+        display:flex;
+        justify-content: space-between;
+    }
+
+    .link{
+        ul{
+         li{
+             display:inline;
+             padding:10px;
+         }
+
+        }
+
+    }
+}
