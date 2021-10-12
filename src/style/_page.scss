@@ -1,7 +1,10 @@
 section{
-    .wrap{
+    .page{
+         max-width:750px;
+         margin:auto;
+         padding: 30px 0px;
         .heading{
-            padding:20px 0px;
+            padding:20px 20px;
             h1{
                 padding:0px;
             }
@@ -21,10 +24,7 @@ section{
     }
 }
 
-.page{
-    max-width:750px;
-    margin:auto;
-}
+
 
 @media(max-width:700px){
     section{

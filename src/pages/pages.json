@@ -1,5 +1,4 @@
-[
-    {
-        "tag": "post"
-    }
-]
+{
+    "layout": "base.njk",
+    "tags": "post"
+}

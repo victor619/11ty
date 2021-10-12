@@ -7,7 +7,7 @@ layout: "base.njk"
                 <h1>Recent Posts</h1>
                 <div class="posts">
 
-                    {%- for post in collections.post -%}
+                    {%- for post in collections.older -%}
 
                         <div class="post"> 
                                  <div class="img"><img src="{{ post.data.img }}" alt="img"></div>
@@ -27,6 +27,3 @@ layout: "base.njk"
 
         </div>
     </section>
-
-    
-                   

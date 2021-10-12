@@ -35,6 +35,10 @@ section{
           padding:10px;
          display:flex;
          flex-direction: column;
+
+         i{
+             padding:5px 0px;
+         }
          a{
              padding:5px;
              background-color: purple;
